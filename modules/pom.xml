@@ -226,18 +226,18 @@
                                 <artifactItem>
                                     <groupId>${project.groupId}</groupId>
                                     <artifactId>hibernate-validator</artifactId>
-                                    <version>${project.version}</version>
+                                    <version>${upstream.version}</version>
                                     <overWrite>false</overWrite>
                                     <outputDirectory>${wildfly-main.patched.target-dir}/modules/system/layers/base/org/hibernate/validator/main</outputDirectory>
-                                    <destFileName>hibernate-validator-${project.version}.jar</destFileName>
+                                    <destFileName>hibernate-validator-${upstream.version}.jar</destFileName>
                                 </artifactItem>
                                 <artifactItem>
                                     <groupId>${project.groupId}</groupId>
                                     <artifactId>hibernate-validator-cdi</artifactId>
-                                    <version>${project.version}</version>
+                                    <version>${upstream.version}</version>
                                     <overWrite>false</overWrite>
                                     <outputDirectory>${wildfly-main.patched.target-dir}/modules/system/layers/base/org/hibernate/validator/cdi/main</outputDirectory>
-                                    <destFileName>hibernate-validator-cdi-${project.version}.jar</destFileName>
+                                    <destFileName>hibernate-validator-cdi-${upstream.version}.jar</destFileName>
                                 </artifactItem>
                                 <!-- WildFly secondary version -->
                                 <artifactItem>
@@ -252,18 +252,18 @@
                                 <artifactItem>
                                     <groupId>${project.groupId}</groupId>
                                     <artifactId>hibernate-validator</artifactId>
-                                    <version>${project.version}</version>
+                                    <version>${upstream.version}</version>
                                     <overWrite>false</overWrite>
                                     <outputDirectory>${wildfly-secondary.patched.target-dir}/modules/system/layers/base/org/hibernate/validator/main</outputDirectory>
-                                    <destFileName>hibernate-validator-${project.version}.jar</destFileName>
+                                    <destFileName>hibernate-validator-${upstream.version}.jar</destFileName>
                                 </artifactItem>
                                 <artifactItem>
                                     <groupId>${project.groupId}</groupId>
                                     <artifactId>hibernate-validator-cdi</artifactId>
-                                    <version>${project.version}</version>
+                                    <version>${upstream.version}</version>
                                     <overWrite>false</overWrite>
                                     <outputDirectory>${wildfly-secondary.patched.target-dir}/modules/system/layers/base/org/hibernate/validator/cdi/main</outputDirectory>
-                                    <destFileName>hibernate-validator-cdi-${project.version}.jar</destFileName>
+                                    <destFileName>hibernate-validator-cdi-${upstream.version}.jar</destFileName>
                                 </artifactItem>
                             </artifactItems>
                         </configuration>

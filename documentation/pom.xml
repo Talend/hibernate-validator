@@ -254,7 +254,7 @@
                         <engine-sourcedir>${asciidoctor.engine-source-dir}</engine-sourcedir>
                         <osgi-integrationtest-sourcedir>${asciidoctor.osgi-integrationtest-source-dir}</osgi-integrationtest-sourcedir>
 
-                        <hvVersion>${project.version}</hvVersion>
+                        <hvVersion>${upstream.version}</hvVersion>
                         <bvVersion>${bv.api.version}</bvVersion>
                         <jbossLoggingVersion>${jboss.logging.version}</jbossLoggingVersion>
                         <classmateVersion>${classmate.version}</classmateVersion>

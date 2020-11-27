@@ -10,33 +10,33 @@
     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
     xsi:schemaLocation="http://karaf.apache.org/xmlns/features/v1.4.0">
 
-    <feature name="hibernate-validator" version="${project.version}">
-        <bundle>mvn:org.hibernate.validator/hibernate-validator/${project.version}</bundle>
+    <feature name="hibernate-validator" version="${upstream.version}">
+        <bundle>mvn:org.hibernate.validator/hibernate-validator/${upstream.version}</bundle>
         <bundle>mvn:javax.validation/validation-api/${bv.api.version}</bundle>
 
         <bundle>mvn:org.jboss.logging/jboss-logging/${jboss.logging.version}</bundle>
         <bundle>mvn:com.fasterxml/classmate/${classmate.version}</bundle>
         <bundle>mvn:org.glassfish/javax.el/${javax.el.version}</bundle>
     </feature>
-    <feature name="hibernate-validator-jsoup" version="${project.version}">
+    <feature name="hibernate-validator-jsoup" version="${upstream.version}">
         <feature>hibernate-validator</feature>
         <bundle>mvn:org.jsoup/jsoup/${jsoup.version}</bundle>
     </feature>
-    <feature name="hibernate-validator-joda-time" version="${project.version}">
+    <feature name="hibernate-validator-joda-time" version="${upstream.version}">
         <feature>hibernate-validator</feature>
         <bundle>mvn:joda-time/joda-time/${joda-time.version}</bundle>
     </feature>
-    <feature name="hibernate-validator-javax-money" version="${project.version}">
+    <feature name="hibernate-validator-javax-money" version="${upstream.version}">
         <feature>hibernate-validator</feature>
         <bundle>mvn:javax.money/money-api/${javax-money.version}</bundle>
         <bundle>mvn:org.javamoney/moneta/${moneta.version}</bundle>
         <bundle>mvn:javax.annotation/javax.annotation-api/${javax-annotation-api.version}</bundle>
     </feature>
-    <feature name="hibernate-validator-groovy" version="${project.version}">
+    <feature name="hibernate-validator-groovy" version="${upstream.version}">
         <feature>hibernate-validator</feature>
         <bundle>mvn:org.codehaus.groovy/groovy-all/${groovy.version}</bundle>
     </feature>
-    <feature name="hibernate-validator-paranamer" version="${project.version}">
+    <feature name="hibernate-validator-paranamer" version="${upstream.version}">
         <feature prerequisite="true">wrap</feature>
         <feature>hibernate-validator</feature>
         <bundle>wrap:mvn:com.thoughtworks.paranamer/paranamer/${paranamer.version}</bundle>

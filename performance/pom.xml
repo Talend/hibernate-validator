@@ -162,7 +162,7 @@
             </activation>
             <properties>
                 <beanvalidation-impl.name>Hibernate Validator</beanvalidation-impl.name>
-                <beanvalidation-impl.version>${project.version}</beanvalidation-impl.version>
+                <beanvalidation-impl.version>${upstream.version}</beanvalidation-impl.version>
             </properties>
             <dependencies>
                 <dependency>
