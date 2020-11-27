@@ -129,8 +129,8 @@
                         </tag>
                     </tags>
                     <packagesheader>Hibernate Validator Packages</packagesheader>
-                    <doctitle>Hibernate Validator ${project.version}</doctitle>
-                    <windowtitle>Hibernate Validator ${project.version}</windowtitle>
+                    <doctitle>Hibernate Validator ${upstream.version}</doctitle>
+                    <windowtitle>Hibernate Validator ${upstream.version}</windowtitle>
                     <overview>${basedir}/../engine/src/main/java/org/hibernate/validator/overview.html</overview>
                     <groups>
                         <group>
@@ -165,7 +165,7 @@
                     <descriptors>
                         <descriptor>${basedir}/src/main/assembly/dist.xml</descriptor>
                     </descriptors>
-                    <finalName>hibernate-validator-${project.version}</finalName>
+                    <finalName>hibernate-validator-${upstream.version}</finalName>
                     <tarLongFileMode>gnu</tarLongFileMode>
                     <outputDirectory>${project.build.directory}/dist/</outputDirectory>
                 </configuration>

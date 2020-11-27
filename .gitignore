@@ -55,3 +55,5 @@ maven-eclipse.xml
 # Maven wrapper files
 .mvn
 mvnw*
+
+.resolved-pom.xml

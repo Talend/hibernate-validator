@@ -150,7 +150,7 @@
                                 <artifactItem>
                                     <groupId>org.hibernate.validator</groupId>
                                     <artifactId>hibernate-validator</artifactId>
-                                    <version>${project.version}</version>
+                                    <version>${upstream.version}</version>
                                     <type>jar</type>
                                     <outputDirectory>${project.build.directory}/payara5/glassfish/modules</outputDirectory>
                                     <destFileName>hibernate-validator.jar</destFileName>
@@ -159,7 +159,7 @@
                                 <artifactItem>
                                     <groupId>org.hibernate.validator</groupId>
                                     <artifactId>hibernate-validator-cdi</artifactId>
-                                    <version>${project.version}</version>
+                                    <version>${upstream.version}</version>
                                     <type>jar</type>
                                     <outputDirectory>${project.build.directory}/payara5/glassfish/modules</outputDirectory>
                                     <destFileName>hibernate-validator-cdi.jar</destFileName>

@@ -92,6 +92,8 @@
     </modules>
 
     <properties>
+        <upstream.version>6.0.17.Final</upstream.version>
+
         <maven.compiler.source>1.8</maven.compiler.source>
         <maven.compiler.target>1.8</maven.compiler.target>
 
@@ -224,34 +226,34 @@
             <dependency>
                 <groupId>${project.groupId}</groupId>
                 <artifactId>hibernate-validator</artifactId>
-                <version>${project.version}</version>
+                <version>${upstream.version}</version>
             </dependency>
             <dependency>
                 <groupId>${project.groupId}</groupId>
                 <artifactId>hibernate-validator-test-utils</artifactId>
-                <version>${project.version}</version>
+                <version>${upstream.version}</version>
             </dependency>
             <dependency>
                 <groupId>${project.groupId}</groupId>
                 <artifactId>hibernate-validator-cdi</artifactId>
-                <version>${project.version}</version>
+                <version>${upstream.version}</version>
             </dependency>
             <dependency>
                 <groupId>${project.groupId}</groupId>
                 <artifactId>hibernate-validator-annotation-processor</artifactId>
-                <version>${project.version}</version>
+                <version>${upstream.version}</version>
             </dependency>
             <dependency>
                 <groupId>${project.groupId}</groupId>
                 <artifactId>hibernate-validator-modules</artifactId>
-                <version>${project.version}</version>
+                <version>${upstream.version}</version>
                 <classifier>wildfly-${wildfly.version}-patch</classifier>
                 <type>zip</type>
             </dependency>
             <dependency>
                 <groupId>${project.groupId}</groupId>
                 <artifactId>hibernate-validator-modules</artifactId>
-                <version>${project.version}</version>
+                <version>${upstream.version}</version>
                 <classifier>wildfly-${wildfly-secondary.version}-patch</classifier>
                 <type>zip</type>
             </dependency>
@@ -441,6 +443,10 @@
         </extensions>
         <plugins>
             <plugin>
+                <groupId>io.paradoxical</groupId>
+                <artifactId>resolved-pom-maven-plugin</artifactId>
+            </plugin>
+            <plugin>
                 <artifactId>maven-enforcer-plugin</artifactId>
                 <version>3.0.0-M1</version>
                 <executions>
@@ -470,6 +476,34 @@
         <pluginManagement>
             <plugins>
                 <plugin>
+                    <groupId>io.paradoxical</groupId>
+                    <artifactId>resolved-pom-maven-plugin</artifactId>
+                    <version>1.0</version>
+                    <configuration>
+                        <properties>
+                            <revision>${revision}</revision>
+                            <upstream.version>${upstream.version}</upstream.version>
+
+                            <!-- ADD HERE ALL THE CUSTOM PROPERTIES declared in the above <properties> part -->
+                            <!-- something like :
+                            <my.custom.property>${my.custom.property}</my.custom.property>
+                            -->
+                        </properties>
+                    </configuration>
+                    <executions>
+                        <execution>
+                            <id>resolve-my-pom</id>
+                            <phase>initialize</phase>
+                            <goals>
+                                <goal>resolve-pom</goal>
+                            </goals>
+                            <configuration>
+                                <resolvedPomFile>.resolved-pom.xml</resolvedPomFile>
+                            </configuration>
+                        </execution>
+                    </executions>
+                </plugin>
+                <plugin>
                     <artifactId>maven-antrun-plugin</artifactId>
                     <version>1.8</version>
                 </plugin>
@@ -484,7 +518,7 @@
                         <archive>
                             <manifestEntries>
                                 <Implementation-Title>${project.artifactId}</Implementation-Title>
-                                <Implementation-Version>${project.version}</Implementation-Version>
+                                <Implementation-Version>${upstream.version}</Implementation-Version>
                                 <Implementation-Vendor>${project.parent.groupId}</Implementation-Vendor>
                                 <Implementation-Vendor-Id>${project.parent.groupId}</Implementation-Vendor-Id>
                                 <Implementation-URL>http://hibernate.org/validator/</Implementation-URL>
@@ -509,7 +543,7 @@
                         <dependency>
                             <groupId>${project.groupId}</groupId>
                             <artifactId>hibernate-validator-build-config</artifactId>
-                            <version>${project.version}</version>
+                            <version>${upstream.version}</version>
                         </dependency>
                         <!--
                              force SLF4J dependency to align
@@ -578,14 +612,14 @@
                             <signaturesArtifact>
                                 <groupId>org.hibernate.validator</groupId>
                                 <artifactId>hibernate-validator-build-config</artifactId>
-                                <version>${project.version}</version>
+                                <version>${upstream.version}</version>
                                 <type>jar</type>
                                 <path>forbidden-common.txt</path>
                             </signaturesArtifact>
                             <signaturesArtifact>
                                 <groupId>org.hibernate.validator</groupId>
                                 <artifactId>hibernate-validator-build-config</artifactId>
-                                <version>${project.version}</version>
+                                <version>${upstream.version}</version>
                                 <type>jar</type>
                                 <path>${forbiddenapis-junit.path}</path>
                             </signaturesArtifact>
@@ -860,7 +894,7 @@
                         <skip>true</skip>
                         <newVersion>
                             <file>
-                                <path>${project.build.directory}/${project.artifactId}-${project.version}.${project.packaging}</path>
+                                <path>${project.build.directory}/${project.artifactId}-${upstream.version}.${project.packaging}</path>
                             </file>
                         </newVersion>
                         <parameter>
@@ -1043,9 +1077,9 @@
     </licenses>
 
     <scm>
-        <connection>scm:git:git://github.com/hibernate/hibernate-validator.git</connection>
-        <developerConnection>scm:git:git@github.com:hibernate/hibernate-validator.git</developerConnection>
-        <url>http://github.com/hibernate/hibernate-validator</url>
+        <connection>scm:git:https://github.com/Talend/hibernate-validator.git</connection>
+        <developerConnection>scm:git:https://github.com/Talend/hibernate-validator.git</developerConnection>
+        <url>https://github.com/Talend/hibernate-validator</url>
         <tag>HEAD</tag>
   </scm>
 
