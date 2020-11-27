@@ -20,8 +20,10 @@
 
     <name>Hibernate Validator Karaf Features</name>
     <description>Hibernate Validator features for Apache Karaf</description>
+    <version>${revision}</version>
 
     <properties>
+        <revision>${karaf-features.tesb.version}</revision>
         <hibernate-validator-parent.path>../..</hibernate-validator-parent.path>
     </properties>
 
