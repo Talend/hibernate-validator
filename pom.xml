@@ -96,6 +96,8 @@
 
     <properties>
         <upstream.version>6.0.14.Final</upstream.version>
+        <karaf-features.tesb.version>6.0.14.Final.tesb1</karaf-features.tesb.version>
+        <javax.el.tesb.version>3.0.0</javax.el.tesb.version>
 
         <maven.compiler.source>1.8</maven.compiler.source>
         <maven.compiler.target>1.8</maven.compiler.target>
@@ -491,6 +493,8 @@
                             <!-- something like :
                             <my.custom.property>${my.custom.property}</my.custom.property>
                             -->
+                            <karaf-features.tesb.version>${karaf-features.tesb.version}</karaf-features.tesb.version>
+                            <javax.el.tesb.version>${javax.el.tesb.version}</javax.el.tesb.version>
                         </properties>
                     </configuration>
                     <executions>
