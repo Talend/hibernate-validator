@@ -93,7 +93,7 @@
 
     <properties>
         <upstream.version>6.0.17.Final</upstream.version>
-        <karaf-features.tesb.version>6.0.17.Final.tesb1</karaf-features.tesb.version>
+        <karaf-features.tesb.version>6.0.17.Final.tesb2</karaf-features.tesb.version>
         <javax.el.tesb.version>3.0.0</javax.el.tesb.version>
 
         <maven.compiler.source>1.8</maven.compiler.source>
